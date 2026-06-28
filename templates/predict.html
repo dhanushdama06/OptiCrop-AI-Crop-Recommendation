@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptiCrop | Crop Recommendation</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+   
+</head>
+
+<body>
+
+<div class="glow one"></div>
+<div class="glow two"></div>
+
+<nav>
+
+<div class="logo">🌾 OptiCrop</div>
+
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/predict">Find Your Crop</a></li>
+</ul>
+
+</nav>
+
+<div class="page">
+
+<div class="form-box">
+
+<h2 class="title">🤖 AI Crop Recommendation</h2>
+
+<p class="subtitle">
+Enter the soil and environmental details below.
+</p>
+
+<form action="/prediction" method="POST">
+
+<div class="form-group">
+<label>🌱 Nitrogen (N)</label>
+<input type="number" name="N" step="any" value="{{ request.form.get('N','') }}" required>
+</div>
+
+<div class="form-group">
+<label>🧪 Phosphorous (P)</label>
+<input type="number" name="P" step="any" value="{{ request.form.get('P','') }}" required>
+</div>
+
+<div class="form-group">
+<label>🌿 Potassium (K)</label>
+<input type="number" name="K" step="any" value="{{ request.form.get('K','') }}" required>
+</div>
+
+<div class="form-group">
+<label>🌡 Temperature (°C)</label>
+<input type="number" name="temperature" step="any" value="{{ request.form.get('temperature','') }}" required>
+</div>
+
+<div class="form-group">
+<label>💧 Humidity (%)</label>
+<input type="number" name="humidity" step="any" value="{{ request.form.get('humidity','') }}" required>
+</div>
+
+<div class="form-group">
+<label>⚗ pH Value</label>
+<input type="number" name="ph" step="any" value="{{ request.form.get('ph','') }}" required>
+</div>
+
+<div class="form-group">
+<label>🌧 Rainfall (mm)</label>
+<input type="number" name="rainfall" step="any" value="{{ request.form.get('rainfall','') }}" required>
+</div>
+
+<div class="button-group">
+
+<button type="submit">
+🚀 Predict Best Crop
+</button>
+
+<button type="reset" class="clear-btn">
+🗑 Clear
+</button>
+
+</div>
+
+</form>
+{% if prediction %}
+
+<div class="result">
+
+<h2>🤖 AI Prediction Complete</h2>
+
+<h1>🌾 {{ prediction|title }}</h1>
+
+<p>
+Based on the soil nutrients and environmental conditions you entered,
+this is the most suitable crop recommendation.
+</p>
+
+<div class="info-box">
+
+<div class="info-card">
+<h3>🌱 Soil</h3>
+<p>Healthy</p>
+</div>
+
+<div class="info-card">
+<h3>🤖 AI Status</h3>
+<p>Completed</p>
+</div>
+
+<div class="info-card">
+<h3>📊 Confidence</h3>
+<p>High</p>
+</div>
+
+<div class="info-card">
+<h3>✅ Recommendation</h3>
+<p>Best Match</p>
+</div>
+
+</div>
+
+<div class="action-buttons">
+
+<a href="/predict" class="btn secondary-btn">
+    🌱 Predict Another Crop
+</a>
+<a href="/" class="btn home-btn">
+    🏠 Back to Home
+</a>
+
+</div>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+🌾 OptiCrop | Smart Agricultural Production Optimization Engine
+</p>
+
+<br>
+
+<p>
+Built using Python • Flask • Machine Learning
+</p>
+
+<br>
+
+<p>
+© 2026 All Rights Reserved
+</p>
+
+</footer>
+
+</body>
+
+</html>
