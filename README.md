@@ -1,25 +1,25 @@
-# 🌾 OptiCrop - AI Crop Recommendation System
+#  OptiCrop - AI Crop Recommendation System
 
-## 📌 Overview
+##  Overview
 
 OptiCrop is an AI-powered Crop Recommendation System built using **Python**, **Flask**, and **Machine Learning**. It recommends the most suitable crop based on soil nutrients and environmental conditions entered by the user.
 
 ---
 
-## ✨ Features
+##  Features
 
-* 🌱 AI-powered crop recommendation
-* 🤖 Machine Learning prediction
-* 🌡️ Soil nutrient analysis
-* 💧 Weather parameter analysis
-* 🎨 Modern responsive user interface
-* 🔄 Predict Another Crop option
-* 🗑️ Clear input form
-* 📱 Mobile-friendly design
+*  AI-powered crop recommendation
+*  Machine Learning prediction
+*  Soil nutrient analysis
+*  Weather parameter analysis
+*  Modern responsive user interface
+*  Predict Another Crop option
+*  Clear input form
+*  Mobile-friendly design
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 * Python
 * Flask
@@ -31,7 +31,7 @@ OptiCrop is an AI-powered Crop Recommendation System built using **Python**, **F
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 OptiCrop/
@@ -50,7 +50,7 @@ OptiCrop/
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 Clone the repository:
 
@@ -78,7 +78,7 @@ http://127.0.0.1:5000
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Dhanush**
 
